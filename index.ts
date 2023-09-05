@@ -12,7 +12,7 @@ const NUM_LOBBY_ROOMS = 3 //keep number of rooms small for simplicity
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://connect-four-next-client-gkpwrza3b-jordankisiel.vercel.app:3000",
         methods: ["GET", "POST"],
     },
 })
