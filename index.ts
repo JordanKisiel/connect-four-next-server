@@ -10,12 +10,7 @@ const server = createServer(app)
 
 const NUM_LOBBY_ROOMS = 3 //keep number of rooms small for simplicity
 
-const io = new Server(server, {
-    cors: {
-        origin: "https://connect-four-next-client.vercel.app",
-        methods: ["GET", "POST"],
-    },
-})
+const io = new Server(server)
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001
 
