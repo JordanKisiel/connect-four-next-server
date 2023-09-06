@@ -12,10 +12,12 @@ const NUM_LOBBY_ROOMS = 3 //keep number of rooms small for simplicity
 
 const io = new Server(server, {
     cors: {
-        origin: "https://connect-four-next-client-gkpwrza3b-jordankisiel.vercel.app",
+        origin: "https://connect-four-next-client.vercel.app",
         methods: ["GET", "POST"],
     },
 })
+
+const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001
 
 const lobby = new Lobby(NUM_LOBBY_ROOMS, io)
 
@@ -34,6 +36,6 @@ io.on("connection", (socket) => {
     })
 })
 
-server.listen(3001, () => {
+server.listen(PORT, "0.0.0.0", () => {
     console.log("SERVER IS RUNNING")
 })
