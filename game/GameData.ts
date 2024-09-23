@@ -1,4 +1,4 @@
-import { Board } from "../../types.ts"
+import { Board } from "@/types"
 
 export type GameData = {
     roomID: string
